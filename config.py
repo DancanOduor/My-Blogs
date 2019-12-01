@@ -1,10 +1,9 @@
-Learn more or give us feedback
 import os
 
 class Config:
     SECRET_KEY=os.environ.get('SECRET_KEY')
     QUOTES_URL = 'http://quotes.stormconsultancy.co.uk/random.json'
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:postgres@localhost/bloglist'
+    SQLALCHEMY_DATABASE_URI =  'postgresql+psycopg2://moringa:4567@localhost/blogs'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     
     #  email configurations
@@ -22,7 +21,7 @@ class ProdConfig(Config):
     
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:postgres@localhost/bloglist_test'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:4567@localhost/blogs'
 
 class DevConfig(Config):
     DEBUG = True
@@ -30,7 +29,7 @@ class DevConfig(Config):
         
         
 config_options = { 
-    'development' : DevConfig,
-    'production' : ProdConfig,
+    'Development' : DevConfig,
+    'Production' : ProdConfig,
     'test':TestConfig
 }

@@ -45,6 +45,6 @@ This  application allow users to create blog post
 * Testing the Application
 # To run the tests for the class files:
 
- *  $ python3.7 manage.py tests
+ *  $ python3.6 manage.py tests
 # Known bugs
 * The comment functionality is currently not routing as expected and will be fixed in the next iteration.
