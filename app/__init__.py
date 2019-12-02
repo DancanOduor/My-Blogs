@@ -3,7 +3,7 @@ from flask_bootstrap import Bootstrap
 from config import config_options
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
-from flask_moment import Moment
+# from flask_comment import Comment
 
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
@@ -16,7 +16,7 @@ db = SQLAlchemy()
 def create_app(config_name):
     
     app = Flask(__name__)
-    moment = Moment(app)
+    # comment = Comment(app)
     
     #Creating app configurations
     
