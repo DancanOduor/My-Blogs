@@ -3,6 +3,7 @@ from app.main import main
 from app.auth import auth
 from app.request import get_quote
 from app.models import Blog
+from flask_login import login_required
 
 @main.route('/')
 def index():
