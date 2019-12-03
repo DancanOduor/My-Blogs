@@ -73,10 +73,10 @@ def delete_post(post_id):
 
 
 
-@blogs.route('/blog/<int:id>/comment', methods = ['GET','POST'])
+@blogs.route('/comment/<post_id>', methods = ['GET','POST'])
 @login_required
-def comment(id):
-    post = Blog.query.get_or_404(id)
+def comment(post_id):
+    post = Blog.query.get_or_404(post_id)
     form_comment = CommentForm()
 
     if form_comment.validate_on_submit():
@@ -86,9 +86,9 @@ def comment(id):
         db.session.add(comment)
         db.session.commit()
         flash('Comments added successfuly!')
-        return redirect(url_for('.post', id=post.id))
+        return redirect(url_for('blogs.post',post_id =post_id))
 
     from pprint import pprint
-    pprint(post)
-    return render_template('blog/post.html',post =post, form_comment=form_comment)
+    print(post)
+    return render_template('blog/comments.html',post =post, form_comment=form_comment)
     

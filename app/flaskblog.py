@@ -3,7 +3,7 @@ from forms import RegistrationForm, LoginForm
 app = Flask(__name__)
 
 
-app.config['SECRET_KEY'] = 'fee877a66d578f436511aa011ebb25bb'
+app.config['SECRET_KEY'] = 'fbc3e941d1ae812c676fee4b7f0eac543d4dd747'
 
 posts = [
     {
