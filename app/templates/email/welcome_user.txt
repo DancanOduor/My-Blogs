@@ -1,0 +1,4 @@
+Hello {{user.username}}
+Welcome to Blog Zone 
+You have now signed up for the application and can now start sharing your posts to everyone.
+Good luck.
